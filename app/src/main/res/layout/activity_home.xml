@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homeScreen.HomeActivity"
+    android:background="@color/main_bg">
+
+    <TextView
+        android:id="@+id/monthTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        app:layout_constraintTop_toTopOf="@id/profileBGV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/profileBGV"
+        android:padding="15dp"
+        tools:text="April"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_medium"
+        app:drawableEndCompat="@drawable/ic_drop_down"/>
+
+    <View
+        android:id="@+id/profileBGV"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/corner_box"/>
+
+    <ImageView
+        android:id="@+id/profileIV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/main_screen_img"
+        app:layout_constraintTop_toTopOf="@id/profileBGV"
+        app:layout_constraintStart_toStartOf="@id/profileBGV"
+        app:layout_constraintEnd_toEndOf="@id/profileBGV"
+        app:layout_constraintBottom_toBottomOf="@id/profileBGV"/>
+
+    <CalendarView
+        android:id="@+id/calendarV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/CalenderViewCustom"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintTop_toBottomOf="@id/profileBGV" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/calendarV"
+        app:layout_constraintBottom_toTopOf="@id/menuBGV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/menuBGV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_menu_bg"
+        app:layout_constraintTop_toTopOf="@id/menuBgGL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/menuBgGL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"/>
+
+    <ImageView
+        android:id="@+id/addIV"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:id="@+id/homeIV"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/home_selector"
+        app:layout_constraintBottom_toBottomOf="@id/addIV"
+        app:layout_constraintTop_toTopOf="@id/addIV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:id="@+id/selectedHomeIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginBottom="-6dp"
+        android:background="@drawable/ic_menu_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/homeIV"
+        app:layout_constraintEnd_toEndOf="@id/homeIV"/>
+
+    <ImageView
+        android:id="@+id/searchIV"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/search_selector"
+        app:layout_constraintBottom_toBottomOf="@id/addIV"
+        app:layout_constraintTop_toTopOf="@id/addIV"
+        app:layout_constraintStart_toEndOf="@id/homeIV"
+        app:layout_constraintEnd_toStartOf="@id/addIV"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:id="@+id/selectedSearchIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="-6dp"
+        android:background="@drawable/ic_menu_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/searchIV"
+        app:layout_constraintEnd_toEndOf="@id/searchIV"/>
+
+    <ImageView
+        android:id="@+id/settingIV"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/setting_selector"
+        app:layout_constraintBottom_toBottomOf="@id/addIV"
+        app:layout_constraintTop_toTopOf="@id/addIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:id="@+id/selectedSettingIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="-6dp"
+        android:background="@drawable/ic_menu_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/settingIV"
+        app:layout_constraintEnd_toEndOf="@id/settingIV"/>
+
+    <ImageView
+        android:id="@+id/notificationIV"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:background="@drawable/notification_selector"
+        app:layout_constraintBottom_toBottomOf="@id/addIV"
+        app:layout_constraintTop_toTopOf="@id/addIV"
+        app:layout_constraintStart_toEndOf="@id/addIV"
+        app:layout_constraintEnd_toStartOf="@id/settingIV"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:id="@+id/selectedNotificationIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="-6dp"
+        android:background="@drawable/ic_menu_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/notificationIV"
+        app:layout_constraintEnd_toEndOf="@id/notificationIV"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
