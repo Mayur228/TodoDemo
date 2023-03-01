@@ -19,4 +19,10 @@
         <item name="colorPrimary">@color/white</item>
         <item name="android:textColorPrimary">@color/white</item>
     </style>
+    <style name="Theme.ToDoDemo.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.ToDoDemo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.ToDoDemo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

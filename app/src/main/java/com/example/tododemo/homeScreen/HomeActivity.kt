@@ -62,6 +62,9 @@ class HomeActivity : AppCompatActivity() {
         binding.settingIV.isActivated = false
 
         binding.homeIV.setOnClickListener {
+            binding.monthTV.isVisible = true
+            binding.profileBGV.isVisible = true
+            binding.profileIV.isVisible = true
             changeFragment(HomeFragment.newInstance())
             binding.selectedHomeIV.isVisible = true
             binding.selectedSearchIV.isVisible = false
@@ -74,6 +77,9 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.searchIV.setOnClickListener {
+            binding.monthTV.isVisible = true
+            binding.profileBGV.isVisible = true
+            binding.profileIV.isVisible = true
             changeFragment(SearchFragment.newInstance())
             binding.selectedHomeIV.isVisible = false
             binding.selectedSearchIV.isVisible = true
@@ -86,6 +92,9 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.notificationIV.setOnClickListener {
+            binding.monthTV.isVisible = true
+            binding.profileBGV.isVisible = true
+            binding.profileIV.isVisible = true
             changeFragment(NotificationFragment.newInstance())
             binding.selectedHomeIV.isVisible = false
             binding.selectedSearchIV.isVisible = false
@@ -98,6 +107,9 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.settingIV.setOnClickListener {
+            binding.monthTV.isVisible = false
+            binding.profileBGV.isVisible = false
+            binding.profileIV.isVisible = false
             changeFragment(SettingFragment.newInstance())
             binding.selectedHomeIV.isVisible = false
             binding.selectedSearchIV.isVisible = false
@@ -110,14 +122,15 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.addIV.setOnClickListener {
-            AddToDoFragment().show(
-                supportFragmentManager,
-                null
-            )
+            binding.addToDoFragmentContainer.isVisible = true
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.addToDoFragmentContainer, AddToDoFragment.newInstance())
+                .commit()
         }
     }
 
     private fun changeFragment(fragment: Fragment) {
+        binding.addToDoFragmentContainer.isVisible = false
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, fragment)
             .commit()

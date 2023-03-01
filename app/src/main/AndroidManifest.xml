@@ -10,8 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoDemo">
         <activity
+            android:name=".profile.ProfileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.ToDoDemo.NoActionBar" />
+        <activity
             android:name=".homeScreen.HomeActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".startingScreen.MainActivity"
             android:exported="true"

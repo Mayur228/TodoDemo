@@ -11,4 +11,7 @@
     <color name="purple">#B448F1</color>
     <color name="search_bg">#291C34</color>
     <color name="hint_color">#B5B6BD</color>
+    <color name="notification_text">#EBEBEB</color>
+    <color name="search_text">#D9D9D9</color>
+    <color name="setting_card_color">#191822</color>
 </resources>

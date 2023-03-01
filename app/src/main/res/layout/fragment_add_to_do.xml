@@ -1,123 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_box"
     tools:context=".addToDoFragment.AddToDoFragment">
 
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@drawable/add_task_bg"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add a New Task"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="15dp"
-        android:textSize="17sp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/add_a_new_task"
         android:textColor="@color/white"
-        android:fontFamily="@font/poppins_medium"/>
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topView" />
 
     <EditText
         android:id="@+id/taskNameET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/titleTV"
         android:layout_margin="15dp"
-        android:padding="15dp"
-        android:hint="Task Name"
+        android:background="@drawable/edit_text_selector"
         android:fontFamily="@font/poppins_regular"
-        android:textColorHint="@color/hint_color"
+        android:hint="@string/task_name"
+        android:padding="15dp"
         android:textColor="@color/hint_color"
-        android:background="@drawable/edit_text_selector"/>
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintTop_toBottomOf="@id/titleTV" />
 
     <EditText
         android:id="@+id/desET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/taskNameET"
         android:layout_margin="15dp"
-        android:paddingBottom="80dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:paddingTop="15dp"
+        android:background="@drawable/edit_text_selector"
         android:fontFamily="@font/poppins_regular"
-        android:hint="Description"
-        android:textColorHint="@color/hint_color"
+        android:hint="@string/description"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="80dp"
         android:textColor="@color/hint_color"
-        android:background="@drawable/edit_text_selector"/>
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintTop_toBottomOf="@id/taskNameET" />
 
     <TextView
         android:id="@+id/selectDateTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/desET"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="15dp"
-        android:text="Select a Date"
-        android:padding="15dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@id/dateTimeGL"
+        android:background="@drawable/edit_text_selector"
         android:fontFamily="@font/poppins_regular"
-        android:textColorHint="@color/hint_color"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/select_a_date"
         android:textColor="@color/hint_color"
-        android:background="@drawable/edit_text_selector"/>
+        android:textColorHint="@color/hint_color"
+        app:drawableStartCompat="@drawable/ic_calendar"
+        app:layout_constraintEnd_toStartOf="@id/dateTimeGL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desET" />
 
     <TextView
         android:id="@+id/selectTimeTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/desET"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="15dp"
-        android:text="Select a Date"
-        android:padding="15dp"
-        android:gravity="center"
-        app:layout_constraintStart_toEndOf="@id/dateTimeGL"
+        android:background="@drawable/edit_text_selector"
         android:fontFamily="@font/poppins_regular"
-        android:textColorHint="@color/hint_color"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/select_a_time"
         android:textColor="@color/hint_color"
-        android:background="@drawable/edit_text_selector"/>
+        android:textColorHint="@color/hint_color"
+        app:drawableStartCompat="@drawable/ic_clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dateTimeGL"
+        app:layout_constraintTop_toBottomOf="@id/desET" />
 
     <TextView
         android:id="@+id/categoryTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Category"
-        app:layout_constraintTop_toBottomOf="@id/selectDateTV"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="15dp"
-        android:textSize="16sp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/category"
         android:textColor="@color/hint_color"
-        android:fontFamily="@font/poppins_medium"/>
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectDateTV" />
 
-    <Button
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/catRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_category"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryTV" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/alertTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/turn_on_alert_for_this_task"
+        android:textColor="@color/hint_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/catRV" />
+
+    <TextView
         android:id="@+id/createTaskBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="Create Task"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppins_medium"
         android:background="@drawable/ic_task_detail_bg"
-        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="@string/create_task"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/alertTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="55dp"
+        android:layout_height="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/corner_box"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/dateTimeGL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"/>
+        app:layout_constraintGuide_percent="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

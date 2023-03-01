@@ -2,4 +2,36 @@
     <string name="app_name">ToDoDemo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">Category</string>
+    <string name="turn_on_alert_for_this_task">Turn On Alert For This Task</string>
+    <string name="create_task">Create Task</string>
+    <string name="add_a_new_task">Add a New Task</string>
+    <string name="task_name">Task Name</string>
+    <string name="description">Description</string>
+    <string name="select_a_date">Select a Date</string>
+    <string name="select_a_time">Select a Time</string>
+    <string name="notification">Notifications</string>
+    <string name="mark_all_as_read">Mark all as read</string>
+    <string name="search_your_tasks">Search Your Tasks...</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="edit">EDIT</string>
+    <string name="language">Language</string>
+    <string name="reminder_sound">Reminder Sound</string>
+    <string name="sound">Sound</string>
+    <string name="permission">Permission</string>
+    <string name="support">Support</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="profile">PROFILE</string>
+    <string name="profession">Profession</string>
+    <string name="save_changes">Save Changes</string>
 </resources>

@@ -8,7 +8,14 @@ import android.view.ViewGroup
 import com.example.tododemo.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class AddToDoFragment : BottomSheetDialogFragment() {
+class AddToDoFragment : Fragment() {
+
+    companion object {
+        fun newInstance(): AddToDoFragment {
+            val fragment = AddToDoFragment()
+            return fragment
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -17,5 +24,7 @@ class AddToDoFragment : BottomSheetDialogFragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_to_do, container, false)
     }
+
+
 
 }
